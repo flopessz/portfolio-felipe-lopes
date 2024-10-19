@@ -20,7 +20,7 @@ export default async function RootLayout({
             background: `linear-gradient(to top right, rgba(39, 39, 39, 0.5), rgba(36, 36, 36, 0.5), rgba(35, 91, 156, 0.2))`
           }}
         >
-          <div className="fixed flex bottom-0 right-0 p-2">
+          <div className="z-10 fixed flex bottom-6 right-0 p-2">
             <div className="flex items-center justify-center px-4 py-2 bg-dark3 text-gray1 rounded shadow-lg text-lg">
               <span>Site em desenvolvimento | Terminando</span>
             </div>

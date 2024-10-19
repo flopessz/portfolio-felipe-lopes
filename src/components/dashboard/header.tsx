@@ -15,7 +15,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 flex w-full justify-center py-3">
-      <div className="space-x-1 hidden lg:flex p-1 border border-gray-600 rounded-xl bg-dark3 bg-opacity-50">
+      <div className="space-x-1 flex p-1 border border-gray-600 rounded-xl bg-dark3 bg-opacity-50">
         <Link
           href="/"
           className={` ${pathname === "/" && "bg-gray-600 text-white"} 

@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import { FaWhatsapp, FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
 import "@/lib/globals.css";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Portfólio",
@@ -74,6 +75,28 @@ export default function Page({ params }: { params: { lang: string } }) {
                   </a>
               </div>
             </div>
+            <div className="flex flex-col w-full">
+            <span className="text-textgray text-2xl text-start font-bold">
+              Objetivos
+            </span>
+            <ul className="list-disc px-4 pt-2 text-lg font-normal text-textgray">
+              <li>
+                Aperfeiçoar habilidades de resolução de problemas.
+              </li>
+              <li>
+                Fortalecer habilidades de trabalho em equipe.
+              </li>
+              <li>
+                Desenvolver habilidades de gerenciamento de projetos.
+              </li>
+              <li>
+                Aplicar e expandir conhecimento em tecnologias de ponta.
+              </li>
+              <li>
+                Contribuir para o crescimento e sucesso da organização.
+              </li>
+            </ul>
+          </div>
           </div>
         </div>
         <div className="flex flex-col w-full space-y-8">
@@ -122,7 +145,7 @@ export default function Page({ params }: { params: { lang: string } }) {
                 Banco de Dados: [SQL, MySQL, HeidSQL, MariaDB].
               </li>
               <li>
-                Ferramentas e Tecnologias: [Visual Studio Code, GitHub, Colab, React, Next, Node].
+                Ferramentas e Tecnologias: [Visual Studio Code, GitHub, Colab, React, Next, Node, Tailwind].
               </li>
               <li>
                 Pacote office: [Word, PowerPoint, Excel e Power BI]
@@ -131,23 +154,44 @@ export default function Page({ params }: { params: { lang: string } }) {
           </div>
           <div className="flex flex-col w-full">
             <span className="text-textgray text-3xl text-start font-bold">
-              Objetivos
+              Cursos Realizados | <Link href="/certificados" className="underline">Certificados</Link>
             </span>
             <ul className="list-disc px-4 pt-2 text-lg font-normal text-textgray">
               <li>
-                Aperfeiçoar habilidades de resolução de problemas.
+                Microsoft Azure AI Fundamentals.
               </li>
               <li>
-                Fortalecer habilidades de trabalho em equipe.
+                Analista de Dados do Microsoft Power BI.
               </li>
               <li>
-                Desenvolver habilidades de gerenciamento de projetos.
+                Arduino e lógica de programação: o básico para os sistemas embarcados.
               </li>
               <li>
-                Aplicar e expandir conhecumento em tecnologias de ponta.
+                Aprofundamentos em responsabilidade civil.
               </li>
               <li>
-                Contribuir para o crescimento e sucesso da organização.
+                ESG na prática: o meio ambiente do trabalho.
+              </li>
+              <li>
+                Equidade social e o mercado de trabalho: entre identidade e orientações sexuais.
+              </li>
+              <li>
+                Desenvolvimento aplicativos para android com o app inventor
+              </li>
+              <li>
+                Introdução IOT
+              </li>
+              <li>
+                Introdução à Cyber-Segurança
+              </li>
+              <li>
+                Introdução a HTML + CSS
+              </li>
+              <li>
+                Rocketseat Discover - Introdução Programação Web
+              </li>
+              <li>
+                Inteligência artificial e machine learning
               </li>
             </ul>
           </div>
