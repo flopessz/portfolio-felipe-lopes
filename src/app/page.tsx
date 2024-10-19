@@ -83,23 +83,51 @@ export default function Page({ params }: { params: { lang: string } }) {
             </span>
             <h1 className="text-textgray text-lg font-normal text-start">
               Ensino Médio Completo – concluído em 2021
+            </h1>
+            <h1 className="text-textgray text-lg font-normal text-start">
               Colégio Espaço Potencial Objetivo Cotia
+            </h1>
+            <h1 className="text-textgray text-lg font-normal text-start pt-2">
               Graduação em Ciências da Computação – cursando/possível conclusão em 12/2025
-              Universidade São Judas Tadeu - USJT
-              6º Semestre Atualmente
+            </h1>
+            <h1 className="text-textgray text-lg font-normal text-start">
+            Universidade São Judas Tadeu - USJT (6º Semestre Atualmente)
+            </h1>
+          </div>
+          <div className="flex flex-col w-full">
+            <span className="text-textgray text-3xl text-start font-bold">
+              Experiência Profissional
+            </span>
+            <h1 className="text-textgray text-lg font-normal text-start">
+              Desenvolvedor Full Stack
+            </h1>
+            <h1 className="text-textgray text-lg font-normal text-start">
+              Autônomo - Freelancer | Set 2020 – atual
+            </h1>
+            <h1 className="text-textgray text-lg font-normal text-start pl-2">
+              Trabalhei/Trabalho com o freelance de projetos para programação, isso varia de cada trabalho, mas já fiz trabalhos para
+              landing page, automação de páginas e sistemas, criação de dashboard e interface gráfica, desenvolvimento web,
+              conserto de bugs e criação de servidor de SQL. Mas também tenho conhecimento de edição de vídeo e foto.
             </h1>
           </div>
           <div className="flex flex-col w-full">
             <span className="text-textgray text-3xl text-start font-bold">
               Habilidade e Conhecimentos
             </span>
-            <h1 className="text-textgray text-lg font-normal text-start">
-              Linguagens de Programação: [Python, Java, JavaScript, LUA, TypeScript].
-              Desenvolvimento Web/Linguagem de Marcação: [HTML, CSS, React, Next, Node].
-              Banco de Dados: [SQL, MySQL, HeidSQL, MariaDB].
-              Ferramentas de Desenvolvimento: [Visual Studio Code, GitHub, Colab].
-              Pacote office: [Word, PowerPoint, Excel e Power BI]
-            </h1>
+            <ul className="list-disc px-4 pt-2 text-lg font-normal text-textgray">
+              <li>
+                Linguagens de Programação/Marcação: [Python, Java, JavaScript, LUA, TypeScript, HTML, CSS].
+              </li>
+              <li>
+                Banco de Dados: [SQL, MySQL, HeidSQL, MariaDB].
+              </li>
+              <li>
+                Ferramentas e Tecnologias: [Visual Studio Code, GitHub, Colab, React, Next, Node].
+              </li>
+              <li>
+                Pacote office: [Word, PowerPoint, Excel e Power BI]
+              </li>
+            </ul>
           </div>
           <div className="flex flex-col w-full">
             <span className="text-textgray text-3xl text-start font-bold">
