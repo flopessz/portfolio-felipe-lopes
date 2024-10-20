@@ -94,9 +94,9 @@ export default function Page() {
               <span className="w-full py-3 px-3 text-lg font-semibold bg-dark1 text-center text-gray1">
                 {seção.titulo}
               </span>
-              <embed
+              <iframe
                 src={`/path/${seção.pasta}.pdf`}
-                type="application/pdf"
+                frameBorder="0"
                 width="100%"
                 className="h-96 px-2 pb-2 bg-dark1"
               />

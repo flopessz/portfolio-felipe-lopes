@@ -310,7 +310,7 @@ export default function Page() {
                     priority
                     width={256}
                     height={256}
-                    className="h-16 w-16"
+                    className="h-14 w-14"
                   />
                   <div className="flex space-x-2">
                     <FaStar className="text-dark1" size={25} />

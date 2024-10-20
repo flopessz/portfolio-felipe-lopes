@@ -91,8 +91,9 @@ const config: Config = {
         },
       },
       width: {
-        'sm': '90%',
-        'xl': '50%',
+        'a': '70%',
+        'b': '50%',
+        'c': '90%',
       },
       colors: {
         'cor1': '#3fabe2',
