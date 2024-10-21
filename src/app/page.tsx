@@ -16,7 +16,7 @@ export default function Page({ params }: { params: { lang: string } }) {
   return (
     <>
       <div className="flex flex-col w-full h-full">
-        <div className="flex flex-col md:flex-row pb-12 space-x-6">
+        <div className="flex flex-col md:flex-row pb-12 gap-6">
           <Image 
             src="/perfil.png" 
             alt="Logo Perfil"
