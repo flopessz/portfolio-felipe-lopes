@@ -125,7 +125,7 @@ export default function Page({ params }: { params: { lang: string } }) {
               Desenvolvedor Full Stack
             </h1>
             <h1 className="text-textgray text-lg font-normal text-start">
-              Autônomo - Freelancer | Set 2020 – atual
+              Autônomo | Jan 2020 – atual
             </h1>
             <h1 className="text-textgray text-lg font-normal text-start pl-2">
               Trabalhei/Trabalho com o freelance de projetos para programação, isso varia de cada trabalho, mas já fiz trabalhos para
