@@ -1,20 +1,6 @@
-import Link from "next/link";
-import Image from "next/image";
 import React, { useState } from "react";
-import { Medal } from "lucide-react";
-
-import {
-  FaInstagram,
-  FaWhatsapp,
-  FaFacebookF,
-  FaDiscord,
-  FaTelegramPlane,
-  FaMoneyBillWave,
-  FaListAlt,
-} from "react-icons/fa";
-
+import { FaWhatsapp, FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
-import { FiHelpCircle } from "react-icons/fi";
 
 interface PageProps {
   // children: ReactNode;
@@ -28,7 +14,35 @@ const Footer = () => {
 
         <div className="flex space-x-2 text-gray1 text-sm justify-between items-center pt-4 px-4">
           <span>© 2024 | Felipe Lopes de Moura</span>
-          <span>Portfólio Desenvolvido em | Next, Node, React, TypeScript e Tailwindcss</span>
+          <div className="flex flex-wrap gap-4">
+              <a
+                href="mailto:felipelopesdemoura@gmail.com"
+                className="flex items-center hover:text-textgray text-white"
+              >
+                <MdOutlineMarkEmailRead size={25} />
+              </a>
+              <a
+                target="_blank"
+                href="https://github.com/flopessz"
+                className="flex items-center hover:text-textgray text-white"
+              >
+                <FaGithub size={25} />
+              </a>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/felipe-lopes-de-moura-296936246"
+                className="flex items-center hover:text-blue-600 text-white"
+              >
+                <FaLinkedin size={25} />
+              </a>
+              <a
+                target="_blank"
+                href="https://wa.me/5511996950910"
+                className="flex items-center hover:text-green-500 text-white"
+              >
+                <FaWhatsapp size={25} />
+              </a>
+            </div>
         </div>
       </footer>
     </>
