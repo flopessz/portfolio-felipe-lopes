@@ -36,17 +36,6 @@ export default function Page({ params }: { params: { lang: string } }) {
             <h1 className="text-cor1 text-xl font-normal text-center">
               Desenvolvedor Full-Stack
             </h1>
-          </div>
-        </div>
-        <div className="flex flex-col w-full space-y-8">
-          <div className="flex flex-col w-full space-y-2">
-            <div className="flex items-center space-x-3">
-              <hr className="bg-dark3 w-full h-[2px] border-none rounded-md"/>
-              <span className="text-textgray text-3xl font-bold">
-                Contato
-              </span>
-              <hr className="bg-dark3 w-full h-[2px] border-none rounded-md"/>
-            </div>
             <div className="flex justify-center flex-wrap gap-2">
               <a
                 href="mailto:felipelopesdemoura@gmail.com"
@@ -81,15 +70,15 @@ export default function Page({ params }: { params: { lang: string } }) {
               </a>
             </div>
           </div>
+        </div>
+        <div className="flex flex-col w-full space-y-8">
           <div className="flex flex-col w-full space-y-2">
             <div className="flex items-center space-x-3">
               <hr className="bg-dark3 w-full h-[2px] border-none rounded-md"/>
-              <span className="text-textgray text-3xl font-bold whitespace-nowrap">
+              <span className="text-textgray text-4xl font-bold whitespace-nowrap">
                 Sobre mim
               </span>
-              <span className="text-cor1 text-3xl font-bold pt-1">
-                •
-              </span>
+              <hr className="bg-dark3 w-full h-[2px] border-none rounded-md"/>
             </div>
             <h1 className="text-textgray text-lg font-normal text-start">
               Sou uma pessoa da área de TI, tenho facilidade em programação e
@@ -104,18 +93,27 @@ export default function Page({ params }: { params: { lang: string } }) {
               <span className="text-cor1 text-3xl font-bold pt-1">
                 •
               </span>
-              <span className="text-textgray text-3xl font-bold">
-                Objetivos
+              <span className="text-textgray text-3xl font-bold whitespace-nowrap">
+                Experiência Profissional
               </span>
               <hr className="bg-dark3 w-full h-[2px] border-none rounded-md"/>
             </div>
-            <ul className="list-disc px-4 text-lg font-normal text-textgray">
-              <li>Aperfeiçoar habilidades de resolução de problemas.</li>
-              <li>Fortalecer habilidades de trabalho em equipe.</li>
-              <li>Desenvolver habilidades de gerenciamento de projetos.</li>
-              <li>Aplicar e expandir conhecimento em tecnologias de ponta.</li>
-              <li>Contribuir para o crescimento e sucesso da organização.</li>
-            </ul>
+            <div className="flex flex-col space-y-3">
+              <h1 className="text-textgray text-lg font-normal text-start">
+                Autônomo Freelancer | 2020 - Atual
+              </h1>
+              <h1 className="text-cor1 text-lg font-normal text-start">
+                Desenvolvedor Full Stack
+              </h1>
+              <h1 className="text-textgray text-lg font-normal text-start">
+                Trabalhei/Trabalho com o freelance de projetos para programação,
+                isso varia de cada trabalho, mas já fiz trabalhos para landing
+                page, automação de páginas e sistemas, criação de dashboard e
+                interface gráfica, desenvolvimento web, conserto de bugs e criação
+                de servidor de SQL. Mas também tenho conhecimento de edição de
+                vídeo e foto.
+              </h1>
+            </div>
           </div>
           <div className="flex flex-col w-full space-y-2">
             <div className="flex items-center space-x-3">
@@ -140,33 +138,6 @@ export default function Page({ params }: { params: { lang: string } }) {
             <h1 className="text-textgray text-lg font-normal text-start">
               Universidade São Judas Tadeu - USJT (6º Semestre Atualmente)
             </h1>
-          </div>
-          <div className="flex flex-col w-full space-y-2">
-            <div className="flex items-center space-x-3">
-              <span className="text-cor1 text-3xl font-bold pt-1">
-                •
-              </span>
-              <span className="text-textgray text-3xl font-bold">
-                Experiência
-              </span>
-              <hr className="bg-dark3 w-full h-[2px] border-none rounded-md"/>
-            </div>
-            <div className="flex flex-col space-y-3">
-              <h1 className="text-textgray text-lg font-normal text-start">
-                Autônomo Freelancer | 2020 - Atual
-              </h1>
-              <h1 className="text-cor1 text-lg font-normal text-start">
-                Desenvolvedor Full Stack
-              </h1>
-              <h1 className="text-textgray text-lg font-normal text-start">
-                Trabalhei/Trabalho com o freelance de projetos para programação,
-                isso varia de cada trabalho, mas já fiz trabalhos para landing
-                page, automação de páginas e sistemas, criação de dashboard e
-                interface gráfica, desenvolvimento web, conserto de bugs e criação
-                de servidor de SQL. Mas também tenho conhecimento de edição de
-                vídeo e foto.
-              </h1>
-            </div>
           </div>
         </div>
       </div>
