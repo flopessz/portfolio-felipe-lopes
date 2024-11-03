@@ -17,7 +17,7 @@ export default async function RootLayout({
         <div 
           className="h-full w-full flex flex-col items-center justify-between overflow-y-scroll"
           style={{
-            background: `linear-gradient(to top right, rgba(39, 39, 39, 0.5), rgba(36, 36, 36, 0.5), rgba(35, 91, 156, 0.2))`
+            background: `linear-gradient(to top right, rgba(20, 20, 20, 0.5), rgba(25, 25, 25, 0.5), rgba(35, 91, 156, 0.2))`
           }}
         >
           <Header />
