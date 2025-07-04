@@ -14,14 +14,14 @@ export default async function RootLayout({
     <html lang="pt-BR">
       <body className={"bg-dark5 w-screen h-screen fixed"}>
         <Loader />
-        <div 
+        <div
           className="h-full w-full flex flex-col items-center justify-between overflow-y-scroll"
           style={{
-            background: `linear-gradient(to top right, rgba(20, 20, 20, 0.5), rgba(25, 25, 25, 0.5), rgba(35, 91, 156, 0.2))`
+            background: `linear-gradient(to top right, rgba(20, 20, 20, 0.5), rgba(25, 25, 25, 0.5), rgba(35, 91, 156, 0.2))`,
           }}
         >
           <Header />
-          <div className="w-c xl:w-a 3xl:w-b h-fit pt-24 pb-10">
+          <div className="w-c xl:w-a 3xl:w-b h-fit pt-24 lg:pt-10 pb-10">
             {children}
           </div>
           <Footer />
