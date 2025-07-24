@@ -1,16 +1,9 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import { Metadata } from "next";
 import { FaWhatsapp, FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
 import "@/lib/globals.css";
 import Link from "next/link";
-
-export const metadata: Metadata = {
-  title: "Portfólio",
-  description: "Portfólio",
-  keywords: "Portfólio",
-};
 
 export default function Page({ params }: { params: { lang: string } }) {
   return (
@@ -34,7 +27,7 @@ export default function Page({ params }: { params: { lang: string } }) {
               Felipe Lopes de Moura
             </span>
             <h1 className="text-cor1 text-xl font-normal text-center">
-              Desenvolvedor e Programador Pleno
+              Desenvolvedor Full Stack
             </h1>
             <div className="flex justify-center flex-wrap gap-2">
               <a
@@ -62,7 +55,7 @@ export default function Page({ params }: { params: { lang: string } }) {
               </a>
               <a
                 target="_blank"
-                href="https://wa.me/5511996950910"
+                href="https://wa.me/5511996950910?text=Ola%20Felipe!%20Tudo%20bem?%20Me%20interessei%20no%20seu%20curriculo,%20podemos%20conversar?"
                 className="flex space-x-2 hover:bg-dark4 items-center px-4 py-2 rounded-md transition-all duration-300 bg-green-500 text-white"
               >
                 <FaWhatsapp className="text-white" size={25} />

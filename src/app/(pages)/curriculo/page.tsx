@@ -1,12 +1,5 @@
 import React, {} from "react";
-import { Metadata } from "next";
 import "@/lib/globals.css";
-
-export const metadata: Metadata = {
-  title: "Currículo - PDF",
-  description: "Currículo - PDF",
-  keywords: "Currículo - PDF",
-};
 
 export default function Page() {
   return (

@@ -2,8 +2,14 @@ import React from "react";
 import Header from "@/components/dashboard/header";
 import Footer from "@/components/dashboard/footer";
 import Loader from "@/components/dashboard/loader";
-
+import { Metadata } from "next";
 import "@/lib/globals.css";
+
+export const metadata: Metadata = {
+  title: "Portfólio Felipe Lopes",
+  description: "Portfólio",
+  keywords: "Portfólio",
+};
 
 export default async function RootLayout({
   children,

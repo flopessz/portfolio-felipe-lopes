@@ -37,7 +37,7 @@ const Footer = () => {
             </a>
             <a
               target="_blank"
-              href="https://wa.me/5511996950910"
+              href="https://wa.me/5511996950910?text=Ola%20Felipe!%20Tudo%20bem?%20Me%20interessei%20no%20seu%20curriculo,%20podemos%20conversar?"
               className="flex items-center hover:text-green-500 text-white"
             >
               <FaWhatsapp size={25} />

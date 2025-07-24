@@ -5,7 +5,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { BookmarkPlus, Send, BookOpenCheck, Scroll, Menu } from "lucide-react";
-import { XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 export default function Header() {
   const [menuMobile, setMenuMobile] = useState(false);
@@ -39,12 +39,13 @@ export default function Header() {
   }, []);
 
   return (
-    <>
+    <header className="flex w-full justify-center py-3
+    border border-gray-600 bg-dark3 bg-opacity-50">
       {menuOpen && (
         <div className="lg:hidden">
-          <div
+          <div 
             onClick={() => setMenuOpen(false)}
-            className="fixed inset-0 z-50 bg-dark1 opacity-80"
+            className="fixed inset-0 z-50 bg-dark1 opacity-80" 
           />
           <div
             ref={contentRef}
@@ -64,9 +65,7 @@ export default function Header() {
                   priority
                 />
                 <div className="flex h-full">
-                  <span className="text-[#d1d1d1] text-sm mt-3.5 -ml-4">
-                    elipe Lopes de Moura
-                  </span>
+                  <span className="text-[#d1d1d1] text-sm mt-3.5 -ml-4">elipe Lopes de Moura</span>
                 </div>
               </a>
               <button
@@ -77,7 +76,9 @@ export default function Header() {
                 <XMarkIcon className="h-6 w-6" aria-hidden="true" />
               </button>
             </div>
-            <div className="space-y-3 flex flex-col p-1 bg-opacity-50">
+            <div
+              className="space-y-3 flex flex-col p-1 bg-opacity-50"
+            >
               <Link
                 href="/"
                 className={` ${pathname === "/" && "bg-gray-600 text-white"} 
@@ -116,65 +117,78 @@ export default function Header() {
                 <Scroll className="text-white" />
                 <span>Currículo</span>
               </Link>
+              <Link
+                href="/curriculo"
+                className={` ${
+                  pathname === "/curriculo" && "bg-gray-600 text-white"
+                } 
+              flex items-center gap-3 px-4 hover:bg-dark4 text-textgray rounded-xl py-2 disabled:opacity-50 disabled:pointer-events-none transition-all`}
+              >
+                <Scroll className="text-white" />
+                <span>Contato</span>
+              </Link>
             </div>
           </div>
         </div>
       )}
 
-      <nav className="fixed z-50 top-1/4 left-6 transform -translate-y-1/2 hidden lg:flex">
-        <div className="space-y-2 flex flex-col p-1 border border-gray-600 rounded-2xl bg-dark3 bg-opacity-50">
-          <Link
-            href="/"
-            className={` ${pathname === "/" && "bg-gray-600 text-white"} 
-                flex items-center gap-3 px-4 hover:bg-dark4 text-textgray rounded-xl py-2 disabled:opacity-50 disabled:pointer-events-none transition-all`}
-          >
-            <Send className="text-white" />
-            <span>Portfólio</span>
-          </Link>
-          <Link
-            href="/certificados"
-            className={` ${
-              pathname === "/certificados" && "bg-gray-600 text-white"
-            } 
-                flex items-center gap-3 px-4 hover:bg-dark4 text-textgray rounded-xl py-2 disabled:opacity-50 disabled:pointer-events-none transition-all`}
-          >
-            <BookOpenCheck className="text-white" />
-            <span>Certificados</span>
-          </Link>
-          <Link
-            href="/conhecimentos"
-            className={` ${
-              pathname === "/conhecimentos" && "bg-gray-600 text-white"
-            } 
-                flex items-center gap-3 px-4 hover:bg-dark4 text-textgray rounded-xl py-2 disabled:opacity-50 disabled:pointer-events-none transition-all`}
-          >
-            <BookmarkPlus className="text-white" />
-            <span>Conhecimentos</span>
-          </Link>
-          <Link
-            href="/curriculo"
-            className={` ${
-              pathname === "/curriculo" && "bg-gray-600 text-white"
-            } 
-                flex items-center gap-3 px-4 hover:bg-dark4 text-textgray rounded-xl py-2 disabled:opacity-50 disabled:pointer-events-none transition-all`}
-          >
-            <Scroll className="text-white" />
-            <span>Currículo</span>
-          </Link>
-        </div>
-      </nav>
-
-      <header className="fixed z-50 top-3 left-3 lg:hidden">
-        <div className="p-1 border border-gray-600 rounded-2xl bg-dark3 bg-opacity-50">
+      <div
+        className={`space-x-1 flex`}
+      >
+        {menuMobile && (
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="flex items-center gap-3 px-4 hover:bg-dark4 text-textgray rounded-xl py-2 disabled:opacity-50 disabled:pointer-events-none transition-all"
+            className={`flex items-center gap-3 px-4 hover:bg-dark4 text-textgray rounded-xl py-2 disabled:opacity-50 disabled:pointer-events-none transition-all`}
           >
             <Menu className="text-white" />
             <span>Menu</span>
           </button>
-        </div>
-      </header>
-    </>
+        )}
+        <Link
+          href="/"
+          className={` ${pathname === "/" && "bg-gray-700 text-white"} 
+              flex items-center gap-3 px-4 hover:bg-dark4 text-textgray rounded-lg py-2.5 disabled:opacity-50 disabled:pointer-events-none transition-all`}
+        >
+          <Send className="text-white" />
+          {!menuMobile && <span>Portfólio</span>}
+        </Link>
+        <Link
+          href="/certificados"
+          className={` ${
+            pathname === "/certificados" && "bg-gray-600 text-white"
+          } 
+              flex items-center gap-3 px-4 hover:bg-dark4 text-textgray rounded-lg py-2 disabled:opacity-50 disabled:pointer-events-none transition-all`}
+        >
+          <BookOpenCheck className="text-white" />
+          {!menuMobile && <span>Certificados</span>}
+        </Link>
+        <Link
+          href="/conhecimentos"
+          className={` ${
+            pathname === "/conhecimentos" && "bg-gray-600 text-white"
+          } 
+              flex items-center gap-3 px-4 hover:bg-dark4 text-textgray rounded-lg py-2 disabled:opacity-50 disabled:pointer-events-none transition-all`}
+        >
+          <BookmarkPlus className="text-white" />
+          {!menuMobile && <span>Conhecimentos</span>}
+        </Link>
+        <Link
+          href="/curriculo"
+          className={` ${pathname === "/curriculo" && "bg-gray-600 text-white"} 
+              flex items-center gap-3 px-4 hover:bg-dark4 text-textgray rounded-lg py-2 disabled:opacity-50 disabled:pointer-events-none transition-all`}
+        >
+          <Scroll className="text-white" />
+          {!menuMobile && <span>Currículo</span>}
+        </Link>
+        <Link
+          href="/contact"
+          className={` ${pathname === "/contact" && "bg-gray-600 text-white"} 
+              flex items-center gap-3 px-4 hover:bg-dark4 text-textgray rounded-lg py-2 disabled:opacity-50 disabled:pointer-events-none transition-all`}
+        >
+          <Scroll className="text-white" />
+          {!menuMobile && <span>Contato</span>}
+        </Link>
+      </div>
+    </header>
   );
 }
