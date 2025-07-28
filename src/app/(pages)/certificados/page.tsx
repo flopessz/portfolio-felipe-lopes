@@ -9,211 +9,284 @@ import {
   Calendar,
   Building,
 } from "lucide-react";
+import Image from "next/image";
 
 const lista_certificados = [
   {
     id: 1,
     titulo: "Introduction to IoT",
     instituicao: "Cisco Networking Academy",
-    categoria: "Tecnologia",
-    ano: "2023",
-    image: "/api/placeholder/400/300",
+    categoria: "Segurança & IoT",
+    ano: "2022",
     description:
-      "Curso introdutório sobre Internet das Coisas, abordando conceitos fundamentais, protocolos de comunicação e aplicações práticas em diversos setores.",
+      "Curso introdutório sobre Internet das Coisas, abordando conceitos fundamentais, protocolos de comunicação e aplicações práticas.",
     status: "Concluído",
-    link: "/path/Introdução-IOT-certificate.pdf",
+    image: "/path/imagens/introducao-iot.webp",
+    link: "/path/introducao-iot.pdf",
   },
   {
     id: 2,
     titulo: "Introduction to Cybersecurity",
     instituicao: "Cisco Networking Academy",
-    categoria: "Segurança",
-    ano: "2023",
-    image: "/api/placeholder/400/300",
+    categoria: "Segurança & IoT",
+    ano: "2022",
     description:
-      "Fundamentos de segurança cibernética, incluindo tipos de ameaças, métodos de proteção e melhores práticas para manter sistemas seguros.",
+      "Fundamentos de segurança cibernética, incluindo ameaças e melhores práticas para manter sistemas seguros.",
     status: "Concluído",
-    link: "/path/Introdução-a-Cib-certificate.pdf",
+    image: "/path/imagens/introducao-a-cib.webp",
+    link: "/path/introducao-a-cib.pdf",
   },
   {
     id: 3,
     titulo: "Inteligência Artificial e Machine Learning",
     instituicao: "Ecossistema Ânima",
-    categoria: "IA/ML",
-    ano: "2023",
-    image: "/api/placeholder/400/300",
+    categoria: "IA/ML & Dados",
+    ano: "2022",
     description:
-      "Curso abrangente sobre IA e ML, cobrindo algoritmos, redes neurais, deep learning e aplicações práticas em diversos domínios.",
+      "Curso sobre algoritmos, redes neurais, deep learning e aplicações práticas.",
     status: "Concluído",
-    link: "/path/Inteligencia-artificial-machine-learning.pdf",
+    image: "/path/imagens/inteligencia-artificial-machine-learning.webp",
+    link: "/path/inteligencia-artificial-machine-learning.pdf",
   },
   {
     id: 4,
-    titulo: "ESG na Prática: O Meio Ambiente do Trabalho",
-    instituicao: "Ecossistema Ânima",
-    categoria: "Social",
-    ano: "2023",
-    image: "/api/placeholder/400/300",
-    description:
-      "Princípios ESG aplicados ao ambiente corporativo, sustentabilidade empresarial e responsabilidade social corporativa.",
-    status: "Concluído",
-    link: "/path/ESG-na-pratica-o-meio-ambiente-do-trabalho.pdf",
-  },
-  {
-    id: 5,
-    titulo: "Equidade Social e o Mercado de Trabalho",
-    instituicao: "Ecossistema Ânima",
-    categoria: "Social",
-    ano: "2023",
-    image: "/api/placeholder/400/300",
-    description:
-      "Estudo sobre diversidade, inclusão e equidade no mercado de trabalho, abordando políticas públicas e práticas empresariais.",
-    status: "Concluído",
-    link: "/path/equidade-social-e-o-mercado-de-trabalho.pdf",
-  },
-  {
-    id: 6,
-    titulo: "Trilha Conectar do Discover",
-    instituicao: "Rocketseat",
-    categoria: "Programação",
-    ano: "2023",
-    image: "/api/placeholder/400/300",
-    description:
-      "Curso introdutório de programação, cobrindo lógica de programação, estruturas de dados e fundamentos do desenvolvimento web.",
-    status: "Concluído",
-    link: "/path/discover-conectar-certificate.pdf",
-  },
-  {
-    id: 7,
     titulo: "Desenvolvimento de Aplicativo com App Inventor",
     instituicao: "Ecossistema Ânima",
     categoria: "Mobile",
-    ano: "2023",
-    image: "/api/placeholder/400/300",
+    ano: "2022",
     description:
-      "Desenvolvimento de aplicativos móveis usando App Inventor, uma plataforma visual para criação de apps Android.",
+      "Desenvolvimento de aplicativos Android usando App Inventor.",
     status: "Concluído",
-    link: "/path/Desenvolvimento-app-inventor.pdf",
+    image: "/path/imagens/desenvolvimento-app-inventor.webp",
+    link: "/path/desenvolvimento-app-inventor.pdf",
+  },
+  {
+    id: 5,
+    titulo: "Introdução a HTML + CSS",
+    instituicao: "Escola DNC",
+    categoria: "Programação & Web",
+    ano: "2022",
+    description:
+      "Fundamentos de HTML e CSS para criação de páginas web.",
+    status: "Concluído",
+    image: "/path/imagens/introducao-a-html-css.webp",
+    link: "/path/introducao-a-html-css.pdf",
+  },
+  {
+    id: 6,
+    titulo: "ESG na Prática: O Meio Ambiente do Trabalho",
+    instituicao: "Ecossistema Ânima",
+    categoria: "Responsabilidade & ESG",
+    ano: "2023",
+    description:
+      "Sustentabilidade empresarial e responsabilidade social no ambiente corporativo.",
+    status: "Concluído",
+    image: "/path/imagens/esg-na-pratica.webp",
+    link: "/path/esg-na-pratica.pdf",
+  },
+  {
+    id: 7,
+    titulo: "Equidade Social e o Mercado de Trabalho",
+    instituicao: "Ecossistema Ânima",
+    categoria: "Responsabilidade & ESG",
+    ano: "2023",
+    description:
+      "Diversidade, inclusão e políticas públicas no mercado de trabalho.",
+    status: "Concluído",
+    image: "/path/imagens/equidade-social-e-o-mercado-de-trabalho.webp",
+    link: "/path/equidade-social-e-o-mercado-de-trabalho.pdf",
   },
   {
     id: 8,
-    titulo: "Introdução a HTML + CSS",
-    instituicao: "Escola DNC",
-    categoria: "Web",
-    ano: "2022",
-    image: "/api/placeholder/400/300",
+    titulo: "Trilha Conectar do Discover",
+    instituicao: "Rocketseat",
+    categoria: "Programação & Web",
+    ano: "2023",
     description:
-      "Fundamentos do desenvolvimento web, incluindo estruturação com HTML e estilização com CSS para criação de páginas web.",
+      "Curso introdutório de programação com lógica e fundamentos web.",
     status: "Concluído",
-    link: "/path/certificado-html,css Introdução.pdf",
+    image: "/path/imagens/discover-conectar.webp",
+    link: "/path/discover-conectar.pdf",
   },
   {
     id: 9,
     titulo: "Aprofundamentos em responsabilidade civil",
     instituicao: "Ecossistema Ânima",
-    categoria: "Social",
+    categoria: "Responsabilidade & ESG",
     ano: "2023",
-    image: "/api/placeholder/400/300",
     description:
-      "Visa proporcionar aos participantes um conhecimento detalhado sobre os fundamentos e as aplicações práticas do instituto da responsabilidade civil, tanto na esfera contratual quanto extracontratual, com ênfase em questões atuais e relevantes do direito.",
+      "Estudo sobre responsabilidade civil contratual e extracontratual.",
     status: "Concluído",
-    link: "/path/certificado-html,css Introdução.pdf",
+    image: "/path/imagens/aprofundamentos-em-responsabilidade-civil.webp",
+    link: "/path/aprofundamentos-em-responsabilidade-civil.pdf",
   },
   {
     id: 10,
     titulo: "Arduino e lógica de programação",
     instituicao: "Ecossistema Ânima",
-    categoria: "Web",
-    ano: "2022",
-    image: "/api/placeholder/400/300",
+    categoria: "Programação & Web",
+    ano: "2023",
     description:
-      "Objetivo o desenvolvimento de raciocínio lógico, para a estruturação de programas utilizando a Interface de Desenvolvimento do Arduíno, resolvendo problemas através de programas otimizados, seguindo procedimentos e normas técnicas de qualidade, saúde e segurança no trabalho.",
+      "Uso de Arduino para desenvolvimento lógico e resolução de problemas.",
     status: "Concluído",
-    link: "/path/certificado-html,css Introdução.pdf",
+    image: "/path/imagens/arduino-e-logica-de-programacao.webp",
+    link: "/path/arduino-e-logica-de-programacao.pdf",
   },
-    {
+  {
     id: 11,
-    titulo: "Analista de Dados Power BI",
-    instituicao: "Microsoft",
-    categoria: "Web",
-    ano: "2024",
-    image: "/api/placeholder/400/300",
+    titulo: "AI Fundamentals",
+    instituicao: "Microsoft Azure",
+    categoria: "IA/ML & Dados",
+    ano: "2023",
     description:
-      "Objetivo o desenvolvimento de raciocínio lógico, para a estruturação de programas utilizando a Interface de Desenvolvimento do Arduíno, resolvendo problemas através de programas otimizados, seguindo procedimentos e normas técnicas de qualidade, saúde e segurança no trabalho.",
+      "Fundamentos de inteligência artificial e aprendizado de máquina.",
     status: "Concluído",
-    link: "/path/certificado-html,css Introdução.pdf",
+    image: "/path/imagens/azure-ia-introducao-a-inteligencia-artificial.webp",
+    link: "/path/azure-ia-introducao-a-inteligencia-artificial.pdf",
   },
   {
     id: 12,
-    titulo: "AI Fundamentals",
-    instituicao: "Microsoft Azure",
-    categoria: "Web",
-    ano: "2023",
-    image: "/api/placeholder/400/300",
+    titulo: "Analista de Dados Power BI",
+    instituicao: "Microsoft",
+    categoria: "IA/ML & Dados",
+    ano: "2024",
     description:
-      "Objetivo o desenvolvimento de raciocínio lógico, para a estruturação de programas utilizando a Interface de Desenvolvimento do Arduíno, resolvendo problemas através de programas otimizados, seguindo procedimentos e normas técnicas de qualidade, saúde e segurança no trabalho.",
+      "Visualização de dados e criação de dashboards com Power BI.",
     status: "Concluído",
-    link: "/path/certificado-html,css Introdução.pdf",
+    image: "/path/imagens/introducao-ao-powerbi.webp",
+    link: "/path/introducao-ao-powerbi.pdf",
   },
   {
     id: 13,
     titulo: "Internet das Coisas (IoT)",
     instituicao: "Santander Open Academy",
-    categoria: "Web",
+    categoria: "Segurança & IoT",
     ano: "2025",
-    image: "/api/placeholder/400/300",
     description:
-      "Objetivo o desenvolvimento de raciocínio lógico, para a estruturação de programas utilizando a Interface de Desenvolvimento do Arduíno, resolvendo problemas através de programas otimizados, seguindo procedimentos e normas técnicas de qualidade, saúde e segurança no trabalho.",
+      "Uso de dispositivos conectados para soluções inteligentes.",
     status: "Concluído",
-    link: "/path/certificado-html,css Introdução.pdf",
+    image: "/path/imagens/internet-das-coisas-iot.webp",
+    link: "/path/internet-das-coisas-iot.pdf",
   },
   {
     id: 14,
     titulo: "Introdução à ciência de dados",
     instituicao: "Santander Open Academy",
-    categoria: "Web",
+    categoria: "IA/ML & Dados",
     ano: "2025",
-    image: "/api/placeholder/400/300",
     description:
-      "Objetivo o desenvolvimento de raciocínio lógico, para a estruturação de programas utilizando a Interface de Desenvolvimento do Arduíno, resolvendo problemas através de programas otimizados, seguindo procedimentos e normas técnicas de qualidade, saúde e segurança no trabalho.",
+      "Fundamentos de ciência de dados, análise e visualização.",
     status: "Concluído",
-    link: "/path/certificado-html,css Introdução.pdf",
+    image: "/path/imagens/introducao-a-ciencia-de-dados.webp",
+    link: "/path/introducao-a-ciencia-de-dados.pdf",
   },
   {
     id: 15,
     titulo: "Introdução à IA generativa",
     instituicao: "Santander Open Academy",
-    categoria: "Web",
+    categoria: "IA/ML & Dados",
     ano: "2025",
-    image: "/api/placeholder/400/300",
     description:
-      "Objetivo o desenvolvimento de raciocínio lógico, para a estruturação de programas utilizando a Interface de Desenvolvimento do Arduíno, resolvendo problemas através de programas otimizados, seguindo procedimentos e normas técnicas de qualidade, saúde e segurança no trabalho.",
+      "Uso de IA generativa em aplicações práticas.",
     status: "Concluído",
-    link: "/path/certificado-html,css Introdução.pdf",
+    image: "/path/imagens/introducao-a-ia-generativa.webp",
+    link: "/path/introducao-a-ia-generativa.pdf",
   },
   {
-    id: 14,
+    id: 16,
     titulo: "Introdução à Python",
     instituicao: "Santander Open Academy",
-    categoria: "Web",
+    categoria: "Programação & Web",
     ano: "2025",
-    image: "/api/placeholder/400/300",
     description:
-      "Objetivo o desenvolvimento de raciocínio lógico, para a estruturação de programas utilizando a Interface de Desenvolvimento do Arduíno, resolvendo problemas através de programas otimizados, seguindo procedimentos e normas técnicas de qualidade, saúde e segurança no trabalho.",
+      "Fundamentos da linguagem Python com foco em lógica e estruturas.",
     status: "Concluído",
-    link: "/path/certificado-html,css Introdução.pdf",
+    image: "/path/imagens/introducao-a-python.webp",
+    link: "/path/introducao-a-python.pdf",
   },
-];
+  {
+    id: 17,
+    titulo: "API com NodeJS",
+    instituicao: "Escola DNC",
+    categoria: "Back-end",
+    ano: "2025",
+    description:
+      "Criação de APIs RESTful com Express e NodeJS.",
+    status: "Concluído",
+    image: "/path/imagens/api-com-nodejs.webp",
+    link: "/path/api-com-nodejs.pdf",
+  },
+  {
+    id: 18,
+    titulo: "Fundamentos de JavaScript",
+    instituicao: "Escola DNC",
+    categoria: "Programação & Web",
+    ano: "2025",
+    description:
+      "Interatividade com variáveis, funções e eventos no navegador.",
+    status: "Concluído",
+    image: "/path/imagens/fundamentos-de-javascript.webp",
+    link: "/path/fundamentos-de-javascript.pdf",
+  },
+  {
+    id: 19,
+    titulo: "Introdução a HTML + CSS",
+    instituicao: "Escola DNC",
+    categoria: "Programação & Web",
+    ano: "2025",
+    description:
+      "Criação e estilização de páginas HTML.",
+    status: "Concluído",
+    image: "/path/imagens/introducao-a-html-e-css.webp",
+    link: "/path/introducao-a-html-e-css.pdf",
+  },
+  {
+    id: 20,
+    titulo: "Introdução à Lógica de Programação",
+    instituicao: "Escola DNC",
+    categoria: "Programação & Web",
+    ano: "2025",
+    description:
+      "Algoritmos e estruturas básicas de controle.",
+    status: "Concluído",
+    image: "/path/imagens/introducao-a-logica-de-programacao.webp",
+    link: "/path/introducao-a-logica-de-programacao.pdf",
+  },
+  {
+    id: 21,
+    titulo: "Introdução à NodeJS",
+    instituicao: "Escola DNC",
+    categoria: "Back-end",
+    ano: "2025",
+    description:
+      "Fundamentos de aplicações assíncronas com NodeJS.",
+    status: "Concluído",
+    image: "/path/imagens/introducao-a-nodejs.webp",
+    link: "/path/introducao-a-nodejs.pdf",
+  },
+  {
+    id: 22,
+    titulo: "Introdução à TypeScript",
+    instituicao: "Escola DNC",
+    categoria: "Programação & Web",
+    ano: "2025",
+    description:
+      "Código JavaScript tipado com foco em segurança e escalabilidade.",
+    status: "Concluído",
+    image: "/path/imagens/introducao-a-typescript.webp",
+    link: "/path/introducao-a-typescript.pdf",
+  },
+]
 
 const categories = [
   { id: "all", name: "Todos", icon: Award },
-  { id: "IA/ML", name: "IA/ML", icon: Award },
-  { id: "Tecnologia", name: "Tecnologia", icon: Award },
-  { id: "Programação", name: "Programação", icon: Award },
-  { id: "Web", name: "Web", icon: Award },
-  { id: "Segurança", name: "Segurança", icon: Award },
+  { id: "IA/ML & Dados", name: "IA/ML & Dados", icon: Award },
+  { id: "Segurança & IoT", name: "Segurança & IoT", icon: Award },
+  { id: "Programação & Web", name: "Programação & Web", icon: Award },
   { id: "Mobile", name: "Mobile", icon: Award },
-];
+  { id: "Back-end", name: "Back-end", icon: Award },
+  { id: "Responsabilidade & ESG", name: "Responsabilidade & ESG", icon: Award },
+]
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -238,15 +311,11 @@ const itemVariants = {
 
 export default function CertificatesPage() {
   const [selectedCategory, setSelectedCategory] = useState("all");
-  const [searchTerm, setSearchTerm] = useState("");
 
   const filteredCertificates = lista_certificados.filter((cert) => {
     const matchesCategory =
       selectedCategory === "all" || cert.categoria === selectedCategory;
-    const matchesSearch =
-      cert.titulo.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      cert.instituicao.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
+    return matchesCategory;
   });
 
   return (
@@ -294,16 +363,7 @@ export default function CertificatesPage() {
             })}
           </div>
 
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-            <input
-              type="text"
-              placeholder="Buscar certificados..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:border-gray-400 focus:outline-none transition-colors w-64"
-            />
-          </div>
+          
         </div>
       </motion.section>
 
@@ -325,7 +385,7 @@ export default function CertificatesPage() {
         </motion.h2>
 
         <motion.div
-          key={selectedCategory + searchTerm}
+          key={selectedCategory}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           initial="hidden"
           animate="visible"
@@ -340,9 +400,8 @@ export default function CertificatesPage() {
               layout
             >
               <div className="aspect-video relative overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-gray-700/30 to-gray-600/30 flex items-center justify-center">
-                  <Award className="w-16 h-16 text-white/40" />
-                </div>
+                
+                <Image src={cert.image} alt={cert.titulo} width={1117} height={792} className="w-full h-full"/>
               </div>
 
               <div className="p-6 space-y-4">

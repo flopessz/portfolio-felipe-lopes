@@ -4,6 +4,29 @@ import { FaWhatsapp, FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
 import "@/lib/globals.css";
 import Link from "next/link";
+import { GraduationCap } from "lucide-react";
+
+interface Formation {
+  id: number
+  title: string
+  institution: string
+  time: string
+}
+
+const formations: Formation[] = [
+  {
+    id: 1,
+    title: "Bacharelado em Ciência da Computação",
+    institution: "Universidade São Judas Tadeu - USJT",
+    time: "Jan 2022 - Dez 2025",
+  },
+  {
+    id: 2,
+    title: "Ensino Médio Completo",
+    institution: "Colegio Espaço Potencial Objetivo Cotia",
+    time: "Jan 2019 - Dez 2021",
+  },
+]
 
 export default function Page({ params }: { params: { lang: string } }) {
   return (
@@ -61,6 +84,14 @@ export default function Page({ params }: { params: { lang: string } }) {
                 <FaWhatsapp className="text-white" size={25} />
                 <span>WhatsApp/Telefone</span>
               </a>
+              <a
+                href="/curriculo.pdf"
+                target="_blank"
+                className="flex space-x-2 hover:bg-dark4 items-center px-4 py-2 rounded-md transition-all duration-300 bg-dark3 text-gray1"
+              >
+                <MdOutlineMarkEmailRead className="text-white" size={25} />
+                <span>Curriculo</span>
+              </a>
             </div>
           </div>
         </div>
@@ -74,15 +105,16 @@ export default function Page({ params }: { params: { lang: string } }) {
               <hr className="bg-dark3 w-full h-[2px] border-none rounded-md" />
             </div>
             <h1 className="text-textgray text-lg font-normal text-start">
-              Sou Felipe Lopes de Moura, profissional da área de Tecnologia da Informação, 
-              com sólida experiência em desenvolvimento de software e gerenciamento de 
-              dados. Tenho facilidade em programação e já atuei com diversas linguagens, 
+              Sou Felipe Lopes de Moura, profissional da área de Tecnologia da Informação,
+              com sólida experiência em desenvolvimento de software e gerenciamento de
+              dados. Tenho facilidade em programação e já atuei com diversas linguagens,
               incluindo Python, Java, JavaScript e TypeScript.
-
-              Possuo experiência prática no desenvolvimento de interfaces gráficas, 
-              implementação e manutenção de servidores SQL, redes de computadores e 
-              uso de frameworks modernos como React, Next.js e Node.js. Estou sempre 
-              em busca de novos desafios que me permitam aprimorar minhas habilidades 
+            </h1>
+            <h1 className="text-textgray text-lg font-normal text-start">
+              Possuo experiência prática no desenvolvimento de interfaces gráficas,
+              implementação e manutenção de servidores SQL, redes de computadores e
+              uso de frameworks modernos como React, Next.js e Node.js. Estou sempre
+              em busca de novos desafios que me permitam aprimorar minhas habilidades
               técnicas e contribuir com soluções eficientes e inovadoras.
             </h1>
           </div>
@@ -128,26 +160,28 @@ export default function Page({ params }: { params: { lang: string } }) {
           <div className="flex flex-col w-full space-y-2">
 
             <div className="flex items-center space-x-3">
-              <hr className="bg-dark3 w-full h-[2px] border-none rounded-md" />
+              <span className="text-cor1 text-3xl font-bold pt-2">•</span>
               <span className="text-textgray text-3xl font-bold whitespace-nowrap">
                 Formação Acadêmica
               </span>
-              <span className="text-cor1 text-3xl font-bold pt-2">•</span>
+              <hr className="bg-dark3 w-full h-[2px] border-none rounded-md" />
             </div>
-            <h1 className="text-textgray text-lg font-normal text-start">
-              Ensino Médio Completo – concluído em 2021
-            </h1>
-            <h1 className="text-textgray text-lg font-normal text-start">
-              Colégio Espaço Potencial Objetivo Cotia
-            </h1>
-            <h1 className="text-textgray text-lg font-normal text-start pt-1">
-              Graduação em Ciências da Computação – cursando/possível conclusão
-              em 12/2025
-            </h1>
-            <h1 className="text-textgray text-lg font-normal text-start">
-              Universidade São Judas Tadeu - USJT (7º Semestre Atualmente)
-            </h1>
+          
+
+            <div className="relative border-l-2 border-cor1">
+              {formations.map((formation, index) => (
+                <div key={formation.id} className="ml-6 mb-8">
+                  <div className="absolute -left-3.5 top-1.5 w-7 h-7 rounded-full bg-cor1 text-white flex items-center justify-center">
+                    <GraduationCap size={16} />
+                  </div>
+                  <h3 className="text-lg font-semibold text-textgray">{formation.title}</h3>
+                  <p className="text-sm text-textgray">{formation.institution}</p>
+                  <p className="text-xs text-textgray">{formation.time}</p>
+                </div>
+              ))}
+            </div>
           </div>
+
         </div>
       </div>
     </>

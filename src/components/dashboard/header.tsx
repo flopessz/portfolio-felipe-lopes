@@ -108,16 +108,6 @@ export default function Header() {
                 <span>Conhecimentos</span>
               </Link>
               <Link
-                href="/curriculo"
-                className={` ${
-                  pathname === "/curriculo" && "bg-gray-600 text-white"
-                } 
-              flex items-center gap-3 px-4 hover:bg-dark4 text-textgray rounded-xl py-2 disabled:opacity-50 disabled:pointer-events-none transition-all`}
-              >
-                <Scroll className="text-white" />
-                <span>Currículo</span>
-              </Link>
-              <Link
                 href="/contato"
                 className={` ${
                   pathname === "/contato" && "bg-gray-600 text-white"
@@ -171,14 +161,6 @@ export default function Header() {
         >
           <BookmarkPlus className="text-white" />
           {!menuMobile && <span>Conhecimentos</span>}
-        </Link>
-        <Link
-          href="/curriculo"
-          className={` ${pathname === "/curriculo" && "bg-gray-600 text-white"} 
-              flex items-center gap-3 px-4 hover:bg-dark4 text-textgray rounded-lg py-2 disabled:opacity-50 disabled:pointer-events-none transition-all`}
-        >
-          <Scroll className="text-white" />
-          {!menuMobile && <span>Currículo</span>}
         </Link>
         <Link
           href="/contato"
