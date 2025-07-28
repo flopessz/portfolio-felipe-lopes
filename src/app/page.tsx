@@ -74,11 +74,16 @@ export default function Page({ params }: { params: { lang: string } }) {
               <hr className="bg-dark3 w-full h-[2px] border-none rounded-md" />
             </div>
             <h1 className="text-textgray text-lg font-normal text-start">
-              Sou um profissional da área de Tecnologia da Informação com
-              facilidade em programação, tecnologia e gerenciamento de dados.
-              Possuo experiência com desenvolvimento de interfaces gráficas e
-              web, SQL e redes. Estou sempre em busca de aprimoramento técnico e
-              novos desafios na área de TI.
+              Sou Felipe Lopes de Moura, profissional da área de Tecnologia da Informação, 
+              com sólida experiência em desenvolvimento de software e gerenciamento de 
+              dados. Tenho facilidade em programação e já atuei com diversas linguagens, 
+              incluindo Python, Java, JavaScript e TypeScript.
+
+              Possuo experiência prática no desenvolvimento de interfaces gráficas, 
+              implementação e manutenção de servidores SQL, redes de computadores e 
+              uso de frameworks modernos como React, Next.js e Node.js. Estou sempre 
+              em busca de novos desafios que me permitam aprimorar minhas habilidades 
+              técnicas e contribuir com soluções eficientes e inovadoras.
             </h1>
           </div>
           {/* <div className="flex flex-col w-full space-y-8">

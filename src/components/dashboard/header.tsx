@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { BookmarkPlus, Send, BookOpenCheck, Scroll, Menu } from "lucide-react";
+import { BookmarkPlus, Send, BookOpenCheck, Scroll, Menu, BookUser } from "lucide-react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 export default function Header() {
@@ -118,13 +118,13 @@ export default function Header() {
                 <span>Currículo</span>
               </Link>
               <Link
-                href="/curriculo"
+                href="/contato"
                 className={` ${
-                  pathname === "/curriculo" && "bg-gray-600 text-white"
+                  pathname === "/contato" && "bg-gray-600 text-white"
                 } 
               flex items-center gap-3 px-4 hover:bg-dark4 text-textgray rounded-xl py-2 disabled:opacity-50 disabled:pointer-events-none transition-all`}
               >
-                <Scroll className="text-white" />
+                <BookUser className="text-white" />
                 <span>Contato</span>
               </Link>
             </div>
@@ -181,11 +181,11 @@ export default function Header() {
           {!menuMobile && <span>Currículo</span>}
         </Link>
         <Link
-          href="/contact"
-          className={` ${pathname === "/contact" && "bg-gray-600 text-white"} 
+          href="/contato"
+          className={` ${pathname === "/contato" && "bg-gray-600 text-white"} 
               flex items-center gap-3 px-4 hover:bg-dark4 text-textgray rounded-lg py-2 disabled:opacity-50 disabled:pointer-events-none transition-all`}
         >
-          <Scroll className="text-white" />
+          <BookUser className="text-white" />
           {!menuMobile && <span>Contato</span>}
         </Link>
       </div>

@@ -464,66 +464,6 @@ export default function Page() {
           </div>
         </section>
 
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-          <div className="bg-gradient-to-r from-gray-800/40 to-gray-900/40 backdrop-blur-sm rounded-3xl p-12 border border-gray-700/50">
-            <div className="text-center space-y-8">
-              <div className="inline-flex items-center px-6 py-3 rounded-full bg-gray-700/50 border border-gray-600/50">
-                <Cloud className="w-5 h-5 mr-3 text-gray-300" />
-                <span className="text-gray-300 text-sm font-medium">
-                  Resumo da Experiência
-                </span>
-              </div>
-
-              <h2 className="text-4xl font-bold">
-                Transformando Ideias em{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-gray-200">
-                  Realidade Digital
-                </span>
-              </h2>
-
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-12">
-                <div className="text-center">
-                  <div className="text-5xl font-bold text-gray-300 mb-3">
-                    20+
-                  </div>
-                  <div className="text-gray-400 text-lg">
-                    Tecnologias Conhecidas
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="text-5xl font-bold text-gray-300 mb-3">
-                    8+
-                  </div>
-                  <div className="text-gray-400 text-lg">
-                    Projetos Concluídos
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="text-5xl font-bold text-gray-300 mb-3">
-                    3+
-                  </div>
-                  <div className="text-gray-400 text-lg">
-                    Anos de Experiência
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="text-5xl font-bold text-gray-300 mb-3">4</div>
-                  <div className="text-gray-400 text-lg">
-                    Áreas de Especialização
-                  </div>
-                </div>
-              </div>
-
-              <p className="text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed">
-                Minha jornada no desenvolvimento começou com curiosidade e
-                evoluiu para uma paixão por criar soluções tecnológicas que
-                fazem a diferença. Cada projeto é uma oportunidade de aprender
-                algo novo e aprimorar minhas habilidades, sempre buscando
-                excelência e inovação.
-              </p>
-            </div>
-          </div>
-        </section>
       </div>
     </div>
   );
