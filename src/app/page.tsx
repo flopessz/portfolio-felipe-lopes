@@ -168,7 +168,7 @@ export default function Page({ params }: { params: { lang: string } }) {
             </div>
           
 
-            <div className="relative border-l-2 border-cor1">
+            <div className="ml-1 relative border-l-2 border-cor1">
               {formations.map((formation, index) => (
                 <div key={formation.id} className="ml-6 mb-8">
                   <div className="absolute -left-3.5 top-1.5 w-7 h-7 rounded-full bg-cor1 text-white flex items-center justify-center">

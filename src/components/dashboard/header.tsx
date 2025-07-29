@@ -40,7 +40,7 @@ export default function Header() {
 
   return (
     <header className="flex w-full justify-center py-3
-    border border-gray-600 bg-dark3 bg-opacity-50">
+    border-b border-gray-600 bg-dark3 bg-opacity-50">
       {menuOpen && (
         <div className="lg:hidden">
           <div 
