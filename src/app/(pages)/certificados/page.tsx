@@ -276,6 +276,42 @@ const lista_certificados = [
     image: "/path/imagens/introducao-a-typescript.webp",
     link: "/path/introducao-a-typescript.pdf",
   },
+  {
+    id: 23,
+    titulo: "Consumo de API com JavaScript",
+    instituicao: "Escola DNC",
+    categoria: "Programação & Web",
+    ano: "2025",
+    description:
+      "Matéria focada em integrar aplicações front-end com serviços externos via APIs usando fetch e Axios",
+    status: "Concluído",
+    image: "/path/imagens/consumo-de-api-com-javascript.webp",
+    link: "/path/consumo-de-api-com-javascript.pdf",
+  },
+   {
+    id: 24,
+    titulo: "React Native",
+    instituicao: "Escola DNC",
+    categoria: "Mobile",
+    ano: "2025",
+    description:
+      "Matéria focada em desenvolver aplicações móveis nativas com React Native, utilizando componentes reutilizáveis.",
+    status: "Concluído",
+    image: "/path/imagens/react-native.webp",
+    link: "/path/react-native.pdf",
+  },
+   {
+    id: 25,
+    titulo: "Introdução ao React",
+    instituicao: "Escola DNC",
+    categoria: "Programação & Web",
+    ano: "2025",
+    description:
+      "Matéria focada em construir aplicações web com componentes reutilizáveis utilizando a biblioteca React.",
+    status: "Concluído",
+    image: "/path/imagens/introducao-ao-react.webp",
+    link: "/path/introducao-ao-react.pdf",
+  },
 ]
 
 const categories = [
